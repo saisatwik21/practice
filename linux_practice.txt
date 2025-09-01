@@ -13,6 +13,8 @@ ssh-keygen -f <file-name>
 
 ssh-keygen -f sai
 
+ssh-keygen -t rsa -b 4096 -f <file-name>
+
 
 connecting to server command
 -------------------------------
@@ -34,3 +36,59 @@ cd --> change directory
 cd .. --> one step back
 
 ls --> list subdirectories
+
+git
+---
+
+---
+ 🚀 Steps to Push Local Code to GitHub Remote Repo
+
+1. Initialize Git (if not already done)
+
+   
+   git init
+
+
+2.Add remote repository URL
+   (Replace `<your-username>` and `<repo-name>` with your GitHub details)
+
+   
+   git remote add origin https://github.com/<your-username>/<repo-name>.git
+
+
+   > To check remote added:
+
+   
+   git remote -v
+   
+
+3. Stage your files
+   Add all local files to staging:
+
+   
+   git add .
+
+
+4. Commit your changes
+
+  
+   git commit -m "Initial commit"
+   
+
+5. Push code to GitHub
+   For the first push, use:
+
+   
+   git branch -M main     # rename current branch to main (GitHub default)
+   git push -u origin main
+   
+
+   After this, for future changes, you can simply run:
+
+   
+   git push
+   
+
+------------------------------------------------------------------------------------------------------------
+
+
