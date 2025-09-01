@@ -1,0 +1,36 @@
+Linux
+
+1. create key pair
+2. create firewall
+3. import public key to aws account
+4. create server and attach public key
+5. attach firewall to server
+
+Key generation command
+------------------------
+
+ssh-keygen -f <file-name>
+
+ssh-keygen -f sai
+
+
+connecting to server command
+-------------------------------
+ssh -i <private_key> <user-name>@IP
+
+ssh -i <private-key> ec2-user@98.81.70.98
+
+come out of server
+-----------------
+exit
+linux command syntax
+----------------------
+command <options> <inputs>
+
+
+
+cd --> change directory
+
+cd .. --> one step back
+
+ls --> list subdirectories
