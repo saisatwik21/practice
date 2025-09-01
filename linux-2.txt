@@ -1,0 +1,54 @@
+linux-3
+------
+$ --> normal user
+# --> root/admin/super user
+/root --> root user home directory
+
+command <options> <inputs>
+
+/ --> root directory
+
+ls -l --> long listing format in alphabetical order
+ls -lr --> long listing format in reverse alphabetical order
+ls -lt --> latest files on top
+ls -ltr --> latest at bottom
+ls -la --> all files including hidden files and folders
+
+touch <file-name> --> creates empty file
+
+cat > <file-name> --> type text, enter and ctrl+d
+previous content will be replaced
+cat >> <file-name> --> appends text to previous content
+
+
+> --> usually called as redirection
+
+mkdir <name> --> creates directory
+rmdir --> remove empty directory
+rm -f --> forcefully removes file
+rm -rf --> recursively forcefully delete the files and folders inside too
+
+CRUD --> create read update delete
+
+cp <source> <destination> --> copy files/folders
+mv <source> <destination> --> cut and paste
+
+wget <URL> --> downloads the file
+curl <URL> --> shows on the screen
+
+cat <file-name> | grep <word-to-search>
+grep <word-to-search> <file>
+
+https://raw.githubusercontent.com/saisatwik21/practice/refs/heads/main/linux_practice.txt
+
+echo https://raw.githubusercontent.com/saisatwik21/practice/refs/heads/main/linux_practice.txt | cut -d "/" -f1
+
+awk command
+------------
+echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02.txt | awk -F "/" '{print $1F}'
+
+log files --> tail -f <log-file>
+
+find <where to search> -name <file-name>
+
+vim --> visually improved
