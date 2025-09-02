@@ -1,0 +1,68 @@
+permissions 
+-----------------------------------
+
+
+drwxr-xr-x  2 root   root    4096 Sep  2 10:00 Documents
+│          │ │      │       │
+│          │ │      │       └── Size in bytes (or block size for dirs)
+│          │ │      └────────── Group name
+│          │ └───────────────── Owner name
+│          └─────────────────── Number of links (how many dirs/files point here)
+└────────────────────────────── Permissions + type
+
+- -> file
+d -> directory
+
+R -> 4
+W -> 2
+X -> 1
+-			rw-		r--		r--
+file/		user/   group	others
+			owner
+directory     u       g       o
+
+ec2-user ec2-user
+user		group
+
+chmod ugo+w devops.txt
+chmod 700 devops.txt
+
+only owner/root user can change the permissions
+
+ownership
+------------
+
+chown <user>:<group> devops.txt
+
+file ownership can only be modified by root user
+
+
+====================
+package manager connects to internet windows website. downloads them and install them
+
+apt-get
+yum/dnf
+
+dnf install <package-name>
+/etc/yum.repos.d
+
+service management
+===================
+systemctl start <service-name>
+systemctl stop <service-name>
+systemctl status <service-name>
+systemctl restart <service-name>
+systemctl enable <service-name>
+systemctl disable <service-name>
+
+install nginx and start it
+
+protocol, port, ip, username and password
+
+http		80  <IP>
+
+
+
+
+how to give sudo access to user ?
+--------------------------------------
