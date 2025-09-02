@@ -62,7 +62,72 @@ protocol, port, ip, username and password
 http		80  <IP>
 
 
+how can you give key based access to linux user?
+------------------------------------------------------
+
+ssh-keygen -t rsa -b 4096 -f sai
+
+ls -la
+
+cd .ssh
+
+ls -l
+
+cat authorized_keys
+
+task
+----
+
+1. create user
+
+useradd siva
+
+cd /home/siva
+or
+cd ../siva
+
+mkdir .ssh
+
+
+chmod 700 -R .ssh
+
+cd .ssh
+
+
+touch authorized_keys
+
+cd ..
+
+chown siva:siva -R .ssh
+
+
+2. siva can send his public key to admin user
+3. /home/siva admin creates .ssh in /home/sivakumar folder
+4. siva is the only owner to this folder... 700
+5. create a file called authorized_keys with max access 600
+6. admin keeps siva public key here.
+7. now siva should be able to login
 
 
 how to give sudo access to user ?
 --------------------------------------
+
+/etc/sudoers -- > you can do changes to provide root access
+
+vim /etc/sudoers
+
+
+add here
+siva 	ALL=(ALL)  	ALL
+
+
+and save 
+
+or add to wheel group
+
+usermod -aG wheel siva
+
+for this we need to uncomment the line in /etc/sudoers
+%wheel 	ALL=(ALL) 	NOPASSWd: (ALL)
+
+
