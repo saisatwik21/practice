@@ -1,0 +1,41 @@
+we have our own AMI
+devops-practice, ec2-user DevOps321
+not keybased, this is password based
+
+AMI --> Amazon machine image
+
+image --> we and our surroundings
+
+AMI --> base os --> redhat 9 + nginx + applications + packages --> take it as an image
+
+pre configured OS with some packages
+
+public ip vs private ip
+
+192.168.1.102 --> private
+103.149.59.114 --> public
+
+Linux is physical server... nginx is virtual server running in linux server
+
+yum install nginx -y
+
+dnf install nginx -y
+
+dnf is the advanced version of yum, there are modules in dnf
+
+apt-get install nginx -y
+
+/etc/nginx/nginx.conf --> configurations. you must restart the service when there are some config changes
+
+root /usr/share/nginx/html
+
+http://44.201.38.173:80
+
+index.html --> default html
+
+
+domain purchase
+----------------
+
+hostinger
+
