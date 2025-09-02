@@ -1,0 +1,12 @@
+WHAT IS DEVSECOPS ?
+
+DevSecOps is a process improvement that emphasizes building, testing, and deploying the code written by developers on the same day, instead of waiting until the entire development is complete. We can achieve this using Continuous Integration (CI), Continuous Deployment (CD), Continuous Delivery, and Continuous Testing.
+By implementing DevSecOps, we can release software faster and with fewer defects. The core principle behind DevSecOps is an automation mindset, which helps to get the best results in terms of productivity, quality, and security.
+In essence, DevSecOps enhances the software development process by automating and streamlining the entire lifecycle, allowing for quicker feedback, better collaboration, and more reliable software delivery, all while integrating security throughout the process.
+
+Advantages of Devsecops or what is improving using Devops ?
+We improved communication between developers and testers
+Efficiency becomes more
+Product delivery is 100 % accurate
+Faster releases to market
+
