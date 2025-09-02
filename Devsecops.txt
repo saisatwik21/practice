@@ -5,6 +5,7 @@ By implementing DevSecOps, we can release software faster and with fewer defects
 In essence, DevSecOps enhances the software development process by automating and streamlining the entire lifecycle, allowing for quicker feedback, better collaboration, and more reliable software delivery, all while integrating security throughout the process.
 
 Advantages of Devsecops or what is improving using Devops ?
+
 We improved communication between developers and testers
 Efficiency becomes more
 Product delivery is 100 % accurate

@@ -1,0 +1,56 @@
+vim editor
+
+CAT >
+CAT >>
+
+vim <file-name>
+
+3 MODEs
+Esc, Colon, insert MODEs
+
+command MODE
+==============
+:q -> quit the file
+:wq --> write and quit
+:wq! --> force write and quit
+:q! --> exit without saving
+:/<word-search> --> search for the word from top
+:?<word-search> --> search for the word from bottom
+:noh --> no highlight
+:27 d --> delete 27th line
+:%d --> total content will be deleted
+:3s/sbin/SBIN --> in 3rd line first occurence of sbin will be replaced with SBIN
+:3s/sbin/SBIN/g --> all occurence in that line
+:%s/sbin/SBIN/g --> all occurences in the file
+
+Esc Mode
+===============
+u --> undo
+yy --> copy the line where you are
+p --> paste
+dd --> cut the line
+gg --> takes to top of the file
+shift+g --> takes us to bottom of the file
+
+Linux Administration
+=====================
+User management
+CRUD
+useradd <user-name> --> create user
+id <user-name> --> displays the user info
+
+group --> list of similar users
+devops team have 20 members
+create devops group, add team members to the group
+
+in linux when you create user, by default group also will be created with same name..
+primary group and secondary group
+
+1 primary group, atleast one secondary group
+
+groupadd devops --> devops group will be created
+
+usermod -g devops suresh
+usermod -aG testers suresh
+
+passwd <user-name>

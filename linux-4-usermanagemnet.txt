@@ -1,0 +1,145 @@
+Linux adminstration
+
+CRUD --> CREATE READ UPDATE DELETE
+
+user management
+---------------------
+
+Every user in Linux has:
+
+Username → unique login name.
+
+UID (User ID) → numeric ID (e.g., root = UID 0).
+
+GID (Group ID) → primary group the user belongs to.
+
+Home directory → where personal files are stored.
+
+Shell → default command-line shell (/bin/bash, /bin/zsh, etc.).
+
+
+how to add user in linux
+------------------------
+
+
+sudo useradd -m -s /bin/bash sai
+
+-m creates a home directory /home/sai
+
+-s specifies login shell
+
+it will store in /etc/passwd → User account information
+
+to check use command 
+
+cat /etc/passwd
+
+Set password for a user
+--------------------------
+
+sudo passwd sai
+
+Prompts you to enter and confirm a password.
+
+
+/etc/shadow → Encrypted passwords and password policies
+
+read
+---------
+
+id <user-name> --> displays the user info
+
+id sai
+
+update
+---------
+to add into primary group
+--------------------------------
+
+usermod -g group_name user_name
+
+usermod -g devops sai
+
+To add into secondary group
+-------------------------------
+
+usermod -aG DEV sai
+
+
+to check groups
+------------------
+cat /etc/group → contains groups.
+
+
+DELETE
+----------
+sudo userdel -r john
+
+
+user management
+-----------------------
+
+| Command                             | Description                               |
+| ----------------------------------- | ----------------------------------------- |
+| `sudo useradd -m -s /bin/bash john` | Create user `john` with home & bash shell |
+| `sudo passwd john`                  | Set password for user                     |
+| `sudo usermod -aG sudo john`        | Add user to `sudo` group                  |
+| `sudo usermod -aG developers john`  | Add user to `developers` group            |
+| `id john`                           | Show UID, GID, groups of user             |
+| `groups john`                       | Show groups user belongs to               |
+| `whoami`                            | Show current logged-in username           |
+| `sudo userdel -r john`              | Delete user and remove home dir           |
+
+
+group management
+-----------------------
+
+| Command                           | Description            |
+| --------------------------------- | ---------------------- |
+| `sudo groupadd developers`        | Create group           |
+| `sudo groupdel developers`        | Delete group           |
+| `sudo gpasswd -d john developers` | Remove user from group |
+| `cat /etc/group`                  | Show all groups        |
+
+
+password and account policies
+
+| Command                 | Description                             |
+| ----------------------- | --------------------------------------- |
+| `sudo passwd -l john`   | Lock user account                       |
+| `sudo passwd -u john`   | Unlock user account                     |
+| `sudo passwd -e john`   | Expire password (force change at login) |
+| `sudo chage -l john`    | Show password aging info                |
+| `sudo chage -M 30 john` | Set password max age = 30 days          |
+| `sudo chage -d 0 john`  | Force password change on next login     |
+
+file permissions
+
+| Command                               | Description                          |
+| ------------------------------------- | ------------------------------------ |
+| `ls -l file.txt`                      | Show file permissions                |
+| `sudo chown john:developers file.txt` | Change owner & group                 |
+| `chmod 755 file.txt`                  | rwx for owner, rx for group & others |
+| `chmod 700 file.txt`                  | Only owner can access                |
+
+
+monitoring users
+
+| Command  | Description                          |
+| -------- | ------------------------------------ |
+| `who`    | Show logged in users                 |
+| `w`      | Show active users & processes        |
+| `last`   | Show last logins                     |
+| `uptime` | Show system uptime & users logged in |
+
+
+
+
+
+
+
+
+
+
+
+
