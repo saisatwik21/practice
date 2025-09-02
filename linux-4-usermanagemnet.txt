@@ -76,6 +76,40 @@ DELETE
 sudo userdel -r john
 
 
+HOW TO LOGIN TO SERVER using password
+---------------------------
+
+useradd sai
+
+passwd sai
+
+
+
+ssh username @ip
+
+by deafult in linux users need to login with key
+ but we are trying using password for that we need to modify the file
+ 
+ vim /etc/ssh/sshd_config
+ 
+ in file search for password
+ 
+ :?password
+ 
+ it has no neeed to change to yes
+ 
+ 
+ to test sshd_config
+ -----------------------
+ sshd -t
+ 
+ then we need to restart the service
+ 
+ systemctl restart sshd
+ 
+ 
+
+
 user management
 -----------------------
 
