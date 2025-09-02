@@ -1,0 +1,78 @@
+process management
+=====================
+TM --> TL --> TM --> Senior --> Junior --> Frehser
+
+TM --> 5 tasks for 5 TL
+
+ls -l --> it creates a process and assign a process ID, executes the command in kernel --> get the o/p --> display on screen
+
+ps
+
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 May02 ?        00:00:15 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2       0  0 May02 ?        00:00:00 [kthreadd]
+root           3       2  0 May02 ?        00:00:00 [rcu_gp]
+root           4       2  0 May02 ?        00:00:00 [rcu_par_gp]
+root           5       2  0 May02 ?        00:00:00 [slub_flushwq]
+root           6       2  0 May02 ?        00:00:00 [netns]
+root           8       2  0 May02 ?        00:00:00 [kworker/0:0H-events_highpri]
+root          10       2  0 May02 ?        00:00:00 [mm_percpu_wq]
+
+PID and PPID
+
+ps -ef | grep <process-name>
+
+foreground and background process
+
+
+& to take process into background
+
+kill PID --> request to terminate
+
+🔹 kill PID
+
+By default, kill sends signal 15 → SIGTERM (Terminate).
+
+SIGTERM is a polite request for the process to exit.
+
+The process can:
+
+Clean up resources (close files, save state, etc.)
+
+Ignore it (if coded to do so).
+
+
+kill -9 PID
+
+kill -9 PID
+
+-9 means signal 9 → SIGKILL.
+
+This is a forceful kill — the process is immediately stopped by the kernel.
+
+The process cannot ignore it, and no cleanup is done.
+
+
+
+systemctl status nginx
+
+ps -ef | grep nginx
+
+we have application running --> PID
+
+10 users --> 0.1% CPU 0.1% RAM
+2000 users --> 10% CPU, 20% RAM
+10 users 
+
+top -p PID --> check the resources used by particular process
+
+Network management
+===========================
+how do you check open ports in linux
+
+netstat -lntp
+
+systemctl status <service-name>
+ps -ef | grep service-name
+netstat -lntp
+top -p PID
