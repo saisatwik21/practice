@@ -1,0 +1,71 @@
+How DNS Works (Example: facebook.com)
+
+Browser Cache – Browser first checks its local cache for the IP address.
+
+Operating System (OS) Cache & Hosts File – If not found, OS checks its DNS cache and the local hosts file.
+
+DNS Resolver (ISP or Public) – If OS doesn’t have it, the query goes to a DNS resolver (usually your ISP’s resolver or a public one like Google 8.8.8.8 / Cloudflare 1.1.1.1).
+
+Root DNS Servers – The resolver asks a root server. Root servers don’t know the exact IP, but they direct the resolver to the correct Top-Level Domain (TLD) server (e.g., .com, .org, .net).
+
+TLD DNS Servers – The TLD server responds with a reference to the authoritative name servers for the requested domain (e.g., facebook.com).
+
+Authoritative Name Servers – These servers provide the actual IP address for the domain.
+
+Response Back – The resolver returns the IP address to the OS → browser.
+
+Connection Established – Browser uses the IP to connect to the website.
+
+Caching – The result is cached at multiple levels (resolver, OS, browser) for faster future lookups, respecting the TTL (time to live).
+
+
+example
+--------------
+google.com --> browser cache --> OS --> OS Cache --> ISP DNS resolver --> root servers --> TLD info --> .com TLD --> name servers --> A record
+
+name servers --> who are managing that domain now
+domain registar --> a mediator to sell the domain, they have default name servers
+
+create hosted zone in AWS, get the NS records and update in domain provider
+TTL --> time to live is DNS cache before issuing next DNS request
+
+
+records
+---------------
+
+A --> IpV4
+CNAME --> points to another domain
+MX --> mail records
+TXT --> domain verification
+NS --> Nameservers
+AAAA -> Ipv6
+
+
+
+
+======================================================================
+
+TTL - TIMe to Live
+
+browser cache time that much time it will be there
+
+=================================================================================================
+
+Purchase and move domain to AWS
+-------------------------------------
+
+buy sitein hostinger
+
+go to aws service route53
+
+create hosted zone with your site name
+
+take aws name servers and update it in hostinger name servers and save
+
+create A record in AWS and add ip
+
+==========================================================================
+
+
+
+
