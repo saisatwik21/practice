@@ -1,0 +1,164 @@
+proxy
+----------
+
+on behalf of someone
+
+
+forward proxy
+-----------------
+
+
+we are aware of proxy
+
+ex
+---
+
+mobile connected to us vpn and access the prime server to view  us services
+
+
+here
+
+client -> mobile
+server -> prime server
+
+but prime thinks vpn as client
+
+we are hiding the client ideintity so it is forward proxy.
+
+prime --> server, vpn is client for prime
+client --> mobile
+
+we are hiding client identity --> forward proxy
+actual client --> forward proxy --> server
+
+forward proxy use cases
+-----------------------------------
+
+1. content filtering
+2. traffic monitoring
+3. anonymous client
+4. geo restrictions bypass
+5. caching
+
+
+
+reverse proxy
+------------------
+
+Nginx can be used as load balancer, reverse proxy server, web server
+
+1. client is not aware of server identity
+2. security
+3. load balancing
+4. SSL termination
+
+Frontend --> Backend
+
+
+HTTP Status codes
+-------------------
+1XX --> information
+2XX --> success
+3XX --> redirection
+
+errors
+---------
+4XX --> client side error
+5XX --> server side error
+
+
+2XX --> Success
+4XX --> client side errors
+5XX --> server side errors
+1XX --> informational
+3XX --> redirectional
+
+HTTP Methods 
+-----------------
+--> GET, POST, PUT, DELETE, OPTIONS
+
+Nouns and Verbs
+
+CRUD --> Create Read Update Delete
+
+User --> Noun, Create User --> Verbs
+
+http://daws84s.site/user and method GET --> getUser  --> readuser
+http://daws84s.site/user and method POST --> CreateUser
+http://daws84s.site/user and method PUT --> updateUser
+http://daws84s.site/user and method DELETE --> deleteUser
+
+http://daws84s.site/order and method POST
+
+http://daws84s.site/orders and method GET
+
+http://daws84s.site/orders/O654S5HG and method GET
+
+java project structure
+---------------------------
+Java --> Maven --> pom.xml
+groupId, artifactId, version
+
+com.hdfc
+banking.savings.smsbanking
+1.0.0
+
+Java --> .java extension
+java code compile --> bytecode --> run bytecode/compiled code
+
+nodejs --> npm
+
+maven --> java
+
+mvn clean package --> clean previous installs and do the fresh packaging
+.jar --> packaging in java(bytecode)
+
+.java --> java source file extension
+.class --> java bytecode extension
+
+mvn compile --> compile the java source code and create bytecode in .class format in target folder
+mvn package --> pack the java class files into single file called shipping-<version>.jar
+
+maven life cycle --> clean compile test and package
+package == compile+test+package
+
+room --> DB server
+racks --> schema
+tables
+
+python
+file extension --> .py
+build tool --> pip
+build file --> requirements.txt
+
+install PL
+create one directory
+
+Symlink will have diff inodes, hardlinks will have same inode
+if original file is deleted symlink will break. if original file deleted hard link will work
+symlink is used to point diff versions, hardlink is used as backup to original file
+symlink can be created to folders, we can't create hard link to folders
+symlink will work with diff types of disks, hardlink can't be created for diff disks
+
+memory troubleshooting
+-------------------------
+memory - RAM
+storage - HD
+
+swap memory is from HD as virtual RAM
+HD --> RAM --> Programs
+
+disk usage -> df -hT
+
+du -sh <folder-path>
+du -sh * --> all files and folders size will be displayed
+
+/app --> /opt/app
+
+/usr/share/nginx/html --> nginx root directory
+/usr/bin
+/usr/sbin
+/usr/local/bin/
+
+/proc --> processes started by kernel
+

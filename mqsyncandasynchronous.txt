@@ -1,0 +1,25 @@
+MQ Database
+================
+Synchronous and Asynchornous
+
+sync vs async(fire and forget)
+
+http://daws84s.site
+request sent --> waits for 1 min --> if no response then error
+http expects immidiate response --> sync
+
+asyn communication
+===================
+1. point to point -> message will be delivered to single system
+2. topic and subscribe --> message will be delivered to all subscribers
+
+when I upload video, all my subscribers get notifications
+
+ActiveMQ
+RabbitMQ
+IBMMQ
+Kafka
+
+robotshop and we have a vendor to delivere our orders
+
+we get 1000's of messages from our deliverey partner
